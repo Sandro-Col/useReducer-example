@@ -3,7 +3,7 @@ import React, { useEffect, useReducer } from 'react';
 import Card from '../card/card.component';
 
 const INITIAL_STATE = {
-  currentUser: null,
+  user: null,
   searchQuery: 'Bret'
 };
 
@@ -12,7 +12,7 @@ const reducer = (state, action) => {
     case 'SET_USER':
       return {
         ...state,
-        currentUser: action.payload
+        user: action.payload
       };
     case 'SET_SEARCH_QUERY':
       return {
